@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Drop Down Menu Generator</title>
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+	<meta content="Create custom vertical or horizontal drop down menu for free. Simple HTML/CSS/JS multi-level Menu for your website." name="description">
+	<link href="styl.css" rel="stylesheet">
+	
+	<style id="styler"></style>
+	<style id="styleRes"></style>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Rowdies&family=Yanone+Kaffeesatz&family=Catamaran&display=swap&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+	<script src="js/okienka.js"></script>
+	<script src="js/dataSaver.js"></script>
+  </head>
+  
+  <body>
+	<div id="menuGenerator">
+	<header>
+	<img src="img/menu.png" alt="Menu" class="logo">
+	<span id="share" class="info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z"></path></svg><inf>Share</inf></span>
+    <h1>Drop Down Menu Generator</h1>
+	<div class="site_description">Create custom vertical or horizontal drop down menu for free. Simple HTML/CSS/JS multi-level Menu for your website.</div>
+	</header>
+	
+	<div id="generator">
+	  <div id="settings">
+	  
+		<span id="resetuj" class="info nieaktywny">[ Reset ]<inf>Restore default settings</inf></span>
+	  
+	    <h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"></path></svg>Settings</h2>
+		
+		<form id="ustForm">
+		
+	    <div class="seting">
+		  <span class="info informator"><inf class="duzyk">Choose whether menu items should appear next to each other (horizontal) or one below the other (vertical)</inf></span>
+		  <div class="sTitle">Display:</div>
+		  <div class="input">
+		    <select id="display">
+			  <option value="horizontal">Horizontal</option>
+			  <option value="vertical">Vertical</option>
+			</select>
+		  </div>
+		</div>
+		
+		<div class="seting">
+		  <span class="info informator"><inf class="duzyk">Choose whether the drop-down parts of the menu should expand when you click them with the mouse or just hover over them.</inf></span>
+		  <div class="sTitle">Drop-down method:</div>
+		  <div class="input">
+		    <select id="expand">
+			  <option value="click">Click</option>
+			  <option value="hover">Hover</option>
+			</select>
+		  </div>
+		</div>
+		
+		<div class="seting">
+		  <span class="info informator"><inf>Select font family and size</inf></span>
+		  <div class="sTitle">Font:</div>
+		  <div class="input">
+		  
+		  <span class="ferdas info">
+		    <div id="fontFamily"></div>
+			<inf>Font family</inf>
+		  </span>
+
+		  <span class="czwlk info">
+			<span class="numeryk" id="fontSize" value="16" min="8" max="40" step="1"></span>px
+			<inf>Font size</inf>
+		  </span>
+		  </div>
+		</div>
+		
+		<div class="seting">
+		  <span class="info informator"><inf>Choose border style and width</inf></span>
+		  <div class="sTitle">Border:</div>
+		  <div class="input">
+		    <span class="ferdas info">
+		      <select id="borderStyle">
+			    <option value="solid">Solid</option>
+			    <option value="dotted" selected>Dotted</option>
+			    <option value="dashed">Dashed</option>
+				<option value="double">Double</option>
+				<option value="none">None</option>
+			  </select>
+			  <inf>Border style</inf>
+			</span>
+			
+			<span class="czwlk info">
+			  <span class="numeryk" id="borderWidth" value="1" min="0" max="10" step="1"></span>px
+			  <inf>Border width</inf>
+		    </span>
+		  </div>
+		</div>
+		
+		<div class="seting">
+		  <span class="info informator"><inf class="duzyk">Set the space between the beginning of each menu element and the point where it's text string begins</inf></span>
+		  <div class="sTitle">Item padding:</div>
+		  <div class="input">
+			<span class="czwlk info">
+			  <span style="margin-right:5px;"><span style="font-weight:bold;">X</span>:</span><span class="numeryk" id="xPadding" value="5" min="0" max="30" step="1"></span>px
+			  <inf>Horizontal padding</inf>
+		    </span>
+		    
+		    <span class="czwlk info" style="float:right;">
+			  <span style="margin-right:5px;"><span style="font-weight:bold;">Y</span>:</span><span class="numeryk" id="yPadding" value="2" min="0" max="20" step="1"></span>px
+			  <inf>Vertical padding</inf>
+		    </span>
+		    <div style="clear:both;"></div>
+		  </div>
+		</div>
+		
+		<div class="seting">
+		  <span class="info informator"><inf>Set colors for the menu</inf></span>
+		  <div class="sTitle">Colors:</div>
+		  <div class="input">
+		  
+		    <div class="linia1">
+			<label class="kolory">
+			  <span class="szpak">
+			    <span class="klr info"><inf>Menu background color</inf></span>
+			    <span class="sopis">BG</span>
+			  </span>
+			  <input type="color" id="bgColor" value="#ff2727">
+			</label>
+			
+			<label class="kolory">
+			  <span class="szpak">
+			    <span class="klr info"><inf>Background color of hovered items and submenus</inf></span>
+			    <span class="sopis">BG:<maly>hov</maly></span>
+			  </span>
+			  <input type="color" id="bgColorHover" value="#4e4eff">
+			</label>
+			
+			<label class="kolory">
+			  <span class="szpak">
+			    <span class="klr info"><inf>Active element background</inf></span>
+			   <span class="sopis">BG:<maly>act</maly></span>
+			  </span>
+			  <input type="color" id="bgColorActive" value="#a7a7a7">
+			</label>
+			
+			<label class="kolory">
+			  <span class="szpak">
+			    <span class="klr info"><inf>Border color</inf></span>
+			    <span class="sopis">Border</span>
+			  </span>
+			  <input type="color" id="borderColor" value="#a7a7a7">
+			</label>
+			</div>
+			
+			<div class="linia2">
+			<label class="kolory">
+			  <span class="szpak">
+			    <span class="klr info"><inf>Font color</inf></span>
+			    <span class="sopis">Fnt</span>
+			  </span>
+			  <input type="color" id="fontColor" value="#a7a7a7">
+			</label>
+			
+			<label class="kolory">
+			  <span class="szpak">
+			    <span class="klr info"><inf>Font color of hovered items and submenus</inf></span>
+			    <span class="sopis">Fnt:<maly>hov</maly></span>
+			  </span>
+			  <input type="color" id="fontColorHover" value="#a7a7a7">
+			</label>
+			
+			<label class="kolory">
+			  <span class="szpak">
+			    <span class="klr info"><inf>Active element's font color</inf></span>
+			    <span class="sopis">Fnt:<maly>act</maly></span>
+			  </span>
+			  <input type="color" id="fontColorActive" value="#a7a7a7">
+			</label>
+			</div>
+			
+		  </div>
+		</div>
+		
+		
+		<div class="seting">
+		  <span class="info informator"><inf class="duzyk">Decide what "expand arrow" will be shown next to drop down items</inf></span>
+		  <div class="sTitle">Drop down arrow:</div>
+		  <div class="input">
+		  
+		    <span class="wybierzStrzalke wybrana" title="double angle down" value="0">
+			  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M246.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 402.7 361.4 265.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-160 160zm160-352l-160 160c-12.5 12.5-32.8 12.5-45.3 0l-160-160c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L224 210.7 361.4 73.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3z"></path></svg>
+			</span><span class="wybierzStrzalke" title="angle down" value="1">
+			  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path></svg>
+			</span><span class="wybierzStrzalke" title="long arrow down" value="2">
+			  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z"></path></svg>
+		    </span><span class="wybierzStrzalke" title="arrown down" value="3">
+			  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path></svg>
+		    </span><span class="wybierzStrzalke" title="arrow turn down" value="4">
+			  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M32 64C14.3 64 0 49.7 0 32S14.3 0 32 0l96 0c53 0 96 43 96 96l0 306.7 73.4-73.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-128 128c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 402.7 160 96c0-17.7-14.3-32-32-32L32 64z"></path></svg>
+			</span><span class="wybierzStrzalke" title="caret down" value="5">
+			  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"></path></svg>
+			</span><span class="wybierzStrzalke" title="down long" value="6">
+			  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M2 334.5c-3.8 8.8-2 19 4.6 26l136 144c4.5 4.8 10.8 7.5 17.4 7.5s12.9-2.7 17.4-7.5l136-144c6.6-7 8.4-17.2 4.6-26s-12.5-14.5-22-14.5l-72 0 0-288c0-17.7-14.3-32-32-32L128 0C110.3 0 96 14.3 96 32l0 288-72 0c-9.6 0-18.2 5.7-22 14.5z"></path></svg>
+			</span><span class="wybierzStrzalke" title="hand point down" value="7">
+			  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M32 480c0 17.7 14.3 32 32 32s32-14.3 32-32V272H32V480zM224 320c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-17.7-14.3-32-32-32s-32 14.3-32 32v64zm-64 64c17.7 0 32-14.3 32-32V304c0-17.7-14.3-32-32-32s-32 14.3-32 32v48c0 17.7 14.3 32 32 32zm160-96c0 17.7 14.3 32 32 32s32-14.3 32-32V224c0-17.7-14.3-32-32-32s-32 14.3-32 32v64zm-96-88l0 .6c9.4-5.4 20.3-8.6 32-8.6c13.2 0 25.4 4 35.6 10.8c8.7-24.9 32.5-42.8 60.4-42.8c11.7 0 22.6 3.1 32 8.6V160C384 71.6 312.4 0 224 0H162.3C119.8 0 79.1 16.9 49.1 46.9L37.5 58.5C13.5 82.5 0 115.1 0 149v27c0 35.3 28.7 64 64 64h88c22.1 0 40-17.9 40-40s-17.9-40-40-40H96c-8.8 0-16-7.2-16-16s7.2-16 16-16h56c39.8 0 72 32.2 72 72z"></path></svg></span><span class="wybierzStrzalke" title="circle down" value="8">
+			  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM127 281c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l71 71L232 136c0-13.3 10.7-24 24-24s24 10.7 24 24l0 182.1 71-71c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 393c-9.4 9.4-24.6 9.4-33.9 0L127 281z"></path></svg>
+			</span><span class="wybierzStrzalke info" value="9">
+			  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M367.2 412.5L99.5 144.8C77.1 176.1 64 214.5 64 256c0 106 86 192 192 192c41.5 0 79.9-13.1 111.2-35.5zm45.3-45.3C434.9 335.9 448 297.5 448 256c0-106-86-192-192-192c-41.5 0-79.9 13.1-111.2 35.5L412.5 367.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"></path></svg><inf>No arrow</inf>
+			</span>
+			
+		  </div>
+		</div>
+		
+		
+		<div class="seting">
+		  <span class="info informator"><inf class="duzyk">Responsive mode only matters when the "<strong>display</strong>" is set to "<strong>horizontal</strong>". The effect is that under normal conditions the menu is displayed horizontally, but when it does not fit (e.g. on smaller screens) it switches to vertical mode</inf></span>
+		  <div class="sTitle">Responsive mode:</div>
+		  <div class="input" style="display:flex;align-items:center;">
+		    <span class="przelacznik" value="on" id="responsive"></span>
+			<span class="onof"></span>
+		  </div>
+		</div>
+		
+		<div class="seting">
+		  <span class="info informator"><inf class="duzyk">This setting only matters when the "<strong>display</strong>" option is set to "<strong>horizontal</strong>". If enabled, your horizontal menu items will have equal width and will be evenly spaced to cover the entire width of the menu bar</inf></span>
+		  <div class="sTitle">Equal elements:</div>
+		  <div class="input" style="display:flex;align-items:center;">
+		    <span class="przelacznik" value="off" id="equalElements"></span>
+			<span class="onof"></span>
+		  </div>
+		</div>
+		
+		<div class="seting">
+		  <span class="info informator"><inf class="wieksz">Should the edges of your menu be rounded?</inf></span>
+		  <div class="sTitle">Rounding the edges:</div>
+		  <div class="input" style="display:flex;align-items:center;">
+		    <span class="przelacznik" value="off" id="rounding"></span>
+			<span class="onof"></span>
+		  </div>
+		</div>
+		
+		</form>
+		
+	  </div>
+	  
+	  <div id="widok">
+		<div class="przyci1">
+		<span id="wczytajMenu" class="guzik rozwijak"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M572.694 292.093L500.27 416.248A63.997 63.997 0 0 1 444.989 448H45.025c-18.523 0-30.064-20.093-20.731-36.093l72.424-124.155A64 64 0 0 1 152 256h399.964c18.523 0 30.064 20.093 20.73 36.093zM152 224h328v-48c0-26.51-21.49-48-48-48H272l-64-64H48C21.49 64 0 85.49 0 112v278.046l69.077-118.418C86.214 242.25 117.989 224 152 224z"></path></svg>Load<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z" class=""></path></svg><div class="rozwi">
+		  <div class="wiesiek" id="wczytPrzegl">From browser</div>
+		  <label><div class="wiesiek"><input id="wczytZpliku" type="file" accept=".txt,.json" style="display:none;">From file</div></label>
+		</div></span>
+		
+		<span id="zapiszMenu" class="guzik dezaktyw rozwijak info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433.941 129.941l-83.882-83.882A48 48 0 0 0 316.118 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V163.882a48 48 0 0 0-14.059-33.941zM224 416c-35.346 0-64-28.654-64-64 0-35.346 28.654-64 64-64s64 28.654 64 64c0 35.346-28.654 64-64 64zm96-304.52V212c0 6.627-5.373 12-12 12H76c-6.627 0-12-5.373-12-12V108c0-6.627 5.373-12 12-12h228.52c3.183 0 6.235 1.264 8.485 3.515l3.48 3.48A11.996 11.996 0 0 1 320 111.48z"></path></svg>Save<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z" class=""></path></svg><div class="rozwi">
+		  <div class="wiesiek" id="zapPrzegl">In the browser</div>
+		  <div class="wiesiek" id="zapNaDysk">On the disk</div>
+		</div><inf>Your menu is empty</inf></span>
+		</div>
+	    <h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 601 620"><g transform="translate(0,620) scale(0.1,-0.1)"><path d="M260 5160 l0 -1030 125 0 125 0 -6 -57 c-6 -69 -204 -3236 -204 -3270 l0 -23 -150 0 -150 0 0 -385 0 -385 1288 2 1287 3 3 360 c1 198 0 370 -3 383 -5 22 -8 22 -150 22 l-144 0 -5 33 c-3 17 -48 736 -101 1597 -53 861 -98 1600 -102 1643 l-6 77 127 0 126 0 0 190 0 190 645 0 645 0 0 -125 0 -125 125 0 125 0 0 -515 0 -515 -125 0 -125 0 0 -515 0 -515 125 0 125 0 0 -129 0 -128 -53 -6 c-209 -25 -389 -181 -442 -382 -84 -325 165 -645 503 -645 127 0 262 58 358 154 105 105 153 232 154 404 l0 82 -130 0 -130 0 0 -83 c0 -105 -21 -168 -72 -219 -54 -54 -110 -78 -183 -78 -146 0 -255 108 -255 252 0 109 54 194 150 237 39 18 66 21 203 21 l157 0 0 260 0 260 130 0 130 0 0 515 0 515 -130 0 -130 0 0 515 0 515 130 0 130 0 0 125 0 125 810 0 c446 0 810 2 810 5 0 3 -144 293 -320 645 l-320 640 -1550 0 -1550 0 -130 195 -130 195 -870 0 -870 0 0 -1030z m1703 622 l97 -148 0 -432 0 -432 -515 0 -515 0 0 580 0 580 418 0 417 0 98 -148z m897 -543 c-83 -164 -152 -299 -155 -299 -3 0 -72 135 -155 300 l-150 300 293 2 c160 2 297 1 304 0 8 -3 -44 -117 -137 -303z m1030 1 c-83 -165 -152 -300 -155 -300 -3 0 -72 135 -155 300 l-150 300 305 0 305 0 -150 -300z m1030 0 c-83 -165 -152 -300 -155 -300 -3 0 -72 135 -155 300 l-150 300 305 0 305 0 -150 -300z m-1550 -156 c80 -162 147 -299 148 -304 2 -6 -108 -10 -297 -10 -193 0 -301 4 -301 10 0 14 294 600 300 599 3 0 70 -133 150 -295z m1030 -4 c82 -165 150 -302 150 -305 0 -3 -135 -5 -300 -5 -192 0 -300 4 -300 10 0 10 292 600 297 600 2 0 70 -135 153 -300z m1030 0 c82 -165 150 -302 150 -305 0 -3 -135 -5 -300 -5 -192 0 -300 4 -300 10 0 10 292 600 297 600 2 0 70 -135 153 -300z m-2941 -302 c1 -5 -37 -8 -84 -8 l-85 0 1 173 0 172 84 -165 c46 -91 84 -168 84 -172z m-1249 -657 c-22 -13 -469 -191 -479 -191 -8 0 -4 160 4 188 3 9 61 12 247 12 141 0 237 -4 228 -9z m596 -399 c12 -185 21 -338 20 -339 -2 -2 -868 345 -873 351 -2 2 182 78 409 169 227 91 415 163 418 160 3 -2 15 -156 26 -341z m-694 -333 c222 -88 407 -163 412 -167 5 -3 -186 -83 -425 -178 -398 -159 -434 -171 -437 -153 -7 40 35 659 44 659 2 0 185 -72 406 -161z m738 -353 c0 -14 9 -169 21 -346 11 -177 19 -330 17 -340 -3 -16 -63 6 -466 167 -255 102 -460 189 -455 193 10 11 854 349 871 349 6 1 12 -10 12 -23z m-747 -668 c235 -95 427 -174 427 -177 0 -6 -933 -380 -938 -376 -4 3 38 685 44 713 4 18 9 22 22 17 9 -3 209 -83 445 -177z m807 -318 c0 -10 37 -609 43 -697 3 -50 2 -53 -20 -53 -26 0 -963 369 -963 380 0 5 913 377 933 379 4 1 7 -3 7 -9z m-835 -695 c259 -103 471 -188 473 -190 7 -7 -963 -385 -989 -385 -28 0 -29 2 -29 48 0 26 9 184 20 352 11 168 20 320 20 339 0 27 3 32 18 28 9 -2 228 -89 487 -192z m908 -467 l6 -108 -346 0 c-191 0 -344 2 -342 4 2 2 148 61 324 130 176 70 324 131 330 137 14 14 21 -31 28 -163z"/></g></svg>Menu builder</h2>
+		
+		<div style="clear:both;"></div>
+		
+		<div class="przyciski">
+		
+		<span id="newItem" class="guzik"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M492.88 354.58L413.19 320l79.68-34.58c12.16-5.28 17.72-19.41 12.47-31.56-5.28-12.17-19.38-17.67-31.59-12.47l-217.22 94.72L71.91 256l170.5-73.98c12.16-5.28 17.72-19.41 12.47-31.56-5.28-12.19-19.38-17.67-31.59-12.47L19.16 226.56C7.53 231.59 0 243.16 0 256s7.53 24.41 19.12 29.42L98.82 320l-79.67 34.56C7.53 359.59 0 371.16 0 384.02c0 12.84 7.53 24.41 19.12 29.42l218.28 94.69a46.488 46.488 0 0 0 18.59 3.88c6.34-.02 12.69-1.3 18.59-3.86l218.25-94.69c11.62-5.03 19.16-16.59 19.16-29.44.01-12.86-7.52-24.43-19.11-29.44zM256.53 464.11L71.91 384l87.22-37.84 78.28 33.96c5.91 2.58 12.25 3.86 18.59 3.86s12.69-1.28 18.59-3.84l78.3-33.98 87.29 37.88-183.65 80.07zM496 88h-72V16c0-8.84-7.16-16-16-16h-16c-8.84 0-16 7.16-16 16v72h-72c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h72v72c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-72h72c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16z"></path></svg>New Item</span>
+		
+		<span id="pokazPodglad" class="guzik dezaktyw info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"></path></svg>Preview<inf>Your menu is empty</inf></span>
+		
+		<span id="pokazKod" class="guzik dezaktyw info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M234.8 511.7L196 500.4c-4.2-1.2-6.7-5.7-5.5-9.9L331.3 5.8c1.2-4.2 5.7-6.7 9.9-5.5L380 11.6c4.2 1.2 6.7 5.7 5.5 9.9L244.7 506.2c-1.2 4.3-5.6 6.7-9.9 5.5zm-83.2-121.1l27.2-29c3.1-3.3 2.8-8.5-.5-11.5L72.2 256l106.1-94.1c3.4-3 3.6-8.2.5-11.5l-27.2-29c-3-3.2-8.1-3.4-11.3-.4L2.5 250.2c-3.4 3.2-3.4 8.5 0 11.7L140.3 391c3.2 3 8.2 2.8 11.3-.4zm284.1.4l137.7-129.1c3.4-3.2 3.4-8.5 0-11.7L435.7 121c-3.2-3-8.3-2.9-11.3.4l-27.2 29c-3.1 3.3-2.8 8.5.5 11.5L503.8 256l-106.1 94.1c-3.4 3-3.6 8.2-.5 11.5l27.2 29c3.1 3.2 8.1 3.4 11.3.4z"></path></svg>Code<inf>Your menu is empty</inf></span>
+		
+		<span id="wyczysc" class="guzik dezaktyw info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM31.1 128H416V448C416 483.3 387.3 512 352 512H95.1C60.65 512 31.1 483.3 31.1 448V128zM111.1 208V432C111.1 440.8 119.2 448 127.1 448C136.8 448 143.1 440.8 143.1 432V208C143.1 199.2 136.8 192 127.1 192C119.2 192 111.1 199.2 111.1 208zM207.1 208V432C207.1 440.8 215.2 448 223.1 448C232.8 448 240 440.8 240 432V208C240 199.2 232.8 192 223.1 192C215.2 192 207.1 199.2 207.1 208zM304 208V432C304 440.8 311.2 448 320 448C328.8 448 336 440.8 336 432V208C336 199.2 328.8 192 320 192C311.2 192 304 199.2 304 208z"/></svg>Clear<inf>Your menu is empty</inf></span>
+		
+		<span id="instrukcja" class="guzik"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 336v-288C448 21.49 426.5 0 400 0H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1c0-11.72-6.607-21.52-16-27.1v-81.36C441.8 362.8 448 350.2 448 336zM143.1 128h192C344.8 128 352 135.2 352 144C352 152.8 344.8 160 336 160H143.1C135.2 160 128 152.8 128 144C128 135.2 135.2 128 143.1 128zM143.1 192h192C344.8 192 352 199.2 352 208C352 216.8 344.8 224 336 224H143.1C135.2 224 128 216.8 128 208C128 199.2 135.2 192 143.1 192zM384 448H96c-17.67 0-32-14.33-32-32c0-17.67 14.33-32 32-32h288V448z"/></svg>Guide</span>
+		
+		</div>
+		
+	    <div id="drzewo">
+		  <div class="osadz"><div class="pustak"></div></div>
+		</div>
+		
+	  </div>
+	  
+	</div>
+	
+	<footer><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg><script>document.write(new Date().getFullYear())</script> Free Drop Down Menu Generator</footer>
+	
+	</div>
+	
+	<div id="okienko">
+	  <div class="boks">
+	    <div class="topBar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><g><path fill="#ffffc4" d="M564.6 60.2l-48.8-48.8a39.11 39.11 0 0 0-55.2 0l-35.4 35.4a9.78 9.78 0 0 0 0 13.8l90.2 90.2a9.78 9.78 0 0 0 13.8 0l35.4-35.4a39.11 39.11 0 0 0 0-55.2zM427.5 297.6l-40 40a12.3 12.3 0 0 0-3.5 8.5v101.8H64v-320h229.8a12.3 12.3 0 0 0 8.5-3.5l40-40a12 12 0 0 0-8.5-20.5H48a48 48 0 0 0-48 48v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V306.1a12 12 0 0 0-20.5-8.5z"></path><path fill="#d8d8ff" d="M492.8 173.3a9.78 9.78 0 0 1 0 13.8L274.4 405.5l-92.8 10.3a19.45 19.45 0 0 1-21.5-21.5l10.3-92.8L388.8 83.1a9.78 9.78 0 0 1 13.8 0z" class="fa-primary"></path></g></svg><span id="tytl">Creating new item...</span><span id="close" class="zamknij info"><img alt="close" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH5AgFEwwGHRm/1wAAAGVJREFUKM+dksENwDAIAw/vv7P7qFTRJFBUPx0uIMthMAB2MFGEAbQaE+gG86YOzm92aDvzBC/Q+9QKPkAAYbv+PWsJT18DlSd+Sm0Qjac2vSZtfaVXwWqhBo6nq5O+bhunJU8zFxhcQBNi0XPgAAAAAElFTkSuQmCC"><inf>Cancel</inf></span></div>
+	    <div class="kontent">
+		  <div class="pole">
+		    <span class="ops">Text:</span>
+			<span class="enput" style="position:relative;"><span class="itemIcon info"><span id="itemIcon"></span><inf></inf><div id="zmienIkone"><div id="replaceIcon" class="opt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 224c0 17.7 14.3 32 32 32s32-14.3 32-32c0-53 43-96 96-96H320v32c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l64-64c12.5-12.5 12.5-32.8 0-45.3l-64-64c-9.2-9.2-22.9-11.9-34.9-6.9S320 19.1 320 32V64H160C71.6 64 0 135.6 0 224zm512 64c0-17.7-14.3-32-32-32s-32 14.3-32 32c0 53-43 96-96 96H192V352c0-12.9-7.8-24.6-19.8-29.6s-25.7-2.2-34.9 6.9l-64 64c-12.5 12.5-12.5 32.8 0 45.3l64 64c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V448H352c88.4 0 160-71.6 160-160z"></path></svg>Replace icon</div><div id="removeIcon" class="opt"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z"></path></svg>Remove icon</div></div></span><input type="text" id="itemText"></span>
+		    <span class="info pytajnik"><inf class="wieksz">Enter the text of this element</inf></span>
+		  </div>
+		<div class="pole">
+		    <span class="ops">Tooltip:</span>
+			<span class="enput"><input type="text" id="itemTooltip"></span>
+		    <span class="info pytajnik"><inf class="wieksz">Tooltip that will be displayed when you hover the mouse over this element</inf></span>
+		</div>
+		<div class="pole">
+			<span class="ops">Type:</span>
+			<span class="enput">
+				<select id="itemType">
+					<option value="link">Link</option>
+					<option value="dropdown">Drop down</option>
+					<option value="function">Function</option>
+				</select>
+			</span>
+			<span class="info pytajnik"><inf class="duzyk">The Type of element determines what will happen when it is clicked. The <strong>Link</strong> will redirect the user to the specified page, <strong>Dropdown</strong> will expand the element and show its child items, and the <strong>Function</strong> will fire the javascript function you define</inf></span>
+		</div>
+		  <div id="itemValue">
+		    <div class="itemValue pole" dla="link">
+				<span class="ops">Link:</span>
+				<span class="enput"><input type="text" id="adres"></span>
+				<span class="info pytajnik"><inf class="wieksz">Enter the URL to which this item should link.</inf></span>
+			</div>
+			<div class="itemValue pole" dla="dropdown">Drop-down items can contain child items.</div>
+			<div class="itemValue pole" dla="function">
+			  <span class="ops" style="font-size:13px">Function:</span>
+			  <span class="enput">
+				  <div class="divInput">
+					<div>javascript:(function(){</div>
+					<input id="funkcja">
+					<div>})()</div>
+				  </div>
+			  </span>
+			  <span class="info pytajnik" style="vertical-align:top;margin-top:6px;"><inf class="wieksz">Type the inline javascript function that will be executed when this item is clicked</inf></span>
+			</div>
+		  </div>
+		  
+		  <div class="adDiv">
+		    <span id="addItem" class="guzik"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" ><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>Add<inf>The element must have some text!</inf></span>
+		    
+			<span id="zastosuj" class="guzik" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" ><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>Apply<inf>The element must have some text!</inf></span>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<div id="koder">
+	  <div class="boks">
+	    <div class="topBar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"></path></svg><span>Menu Code</span><span id="zamKod" class="zamknij info"><img alt="close" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH5AgFEwwGHRm/1wAAAGVJREFUKM+dksENwDAIAw/vv7P7qFTRJFBUPx0uIMthMAB2MFGEAbQaE+gG86YOzm92aDvzBC/Q+9QKPkAAYbv+PWsJT18DlSd+Sm0Qjac2vSZtfaVXwWqhBo6nq5O+bhunJU8zFxhcQBNi0XPgAAAAAElFTkSuQmCC"><inf>Close</inf></span></div>
+	    <div class="kontent">
+		  <textarea id="kodMenu" readonly></textarea>
+		  <div class="pas">
+		    <span id="skopiuj" class="ikonka info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"></path></svg><inf>Copy to clipboard</inf></span>
+		    
+		    <span id="pobieraj" class="ikonka info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z"/></svg><inf>Download as .txt file</inf></span>
+		    
+		    <span id="blogspot" class="ikonka info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M446.6 222.7c-1.8-8-6.8-15.4-12.5-18.5-1.8-1-13-2.2-25-2.7-20.1-.9-22.3-1.3-28.7-5-10.1-5.9-12.8-12.3-12.9-29.5-.1-33-13.8-63.7-40.9-91.3-19.3-19.7-40.9-33-65.5-40.5-5.9-1.8-19.1-2.4-63.3-2.9-69.4-.8-84.8.6-108.4 10C45.9 59.5 14.7 96.1 3.3 142.9 1.2 151.7.7 165.8.2 246.8c-.6 101.5.1 116.4 6.4 136.5 15.6 49.6 59.9 86.3 104.4 94.3 14.8 2.7 197.3 3.3 216 .8 32.5-4.4 58-17.5 81.9-41.9 17.3-17.7 28.1-36.8 35.2-62.1 4.9-17.6 4.5-142.8 2.5-151.7zm-322.1-63.6c7.8-7.9 10-8.2 58.8-8.2 43.9 0 45.4.1 51.8 3.4 9.3 4.7 13.4 11.3 13.4 21.9 0 9.5-3.8 16.2-12.3 21.6-4.6 2.9-7.3 3.1-50.3 3.3-26.5.2-47.7-.4-50.8-1.2-16.6-4.7-22.8-28.5-10.6-40.8zm191.8 199.8l-14.9 2.4-77.5.9c-68.1.8-87.3-.4-90.9-2-7.1-3.1-13.8-11.7-14.9-19.4-1.1-7.3 2.6-17.3 8.2-22.4 7.1-6.4 10.2-6.6 97.3-6.7 89.6-.1 89.1-.1 97.6 7.8 12.1 11.3 9.5 31.2-4.9 39.4z"/></svg><inf>Install on Blogger</inf></span>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<div id="podejrzec">
+	  <div class="boks">
+	    <div class="topBar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"></path></svg><span>Preview</span><span id="zamPod" class="zamknij" title="Close preview"><img alt="close" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH5AgFEwwGHRm/1wAAAGVJREFUKM+dksENwDAIAw/vv7P7qFTRJFBUPx0uIMthMAB2MFGEAbQaE+gG86YOzm92aDvzBC/Q+9QKPkAAYbv+PWsJT18DlSd+Sm0Qjac2vSZtfaVXwWqhBo6nq5O+bhunJU8zFxhcQBNi0XPgAAAAAElFTkSuQmCC"></span></div>
+	    <div class="kontent" style="padding:0">
+		  <div id="podglad"></div>
+		</div>
+		
+	  </div>
+	</div>
+	
+	<div id="menuSavedInfo" style="opacity:0;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH5AIKASwZCOTpaQAAAGRJREFUKM/lU8kNwDAIs6Osk8myTlmsGch9tUqkHDR91i8EMjYgKAm0IjihnHjHxHGqKkyJtNI0CCslWnlIVU4u8qSpomPGYS32ZvJi23ajvNp0z+En5T+S4+6NASDUX/IGyokXrA4gWjFLjdIAAAAASUVORK5CYII="><span>Your menu has been saved</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path></svg></div>
+	
+	<script src="js/numeryk.js"></script>
+	<script src="js/czcionki.js"></script>
+	<script src="js/skrypt.js"></script>
+  </body>
+</html>
