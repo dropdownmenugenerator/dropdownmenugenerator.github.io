@@ -4,10 +4,11 @@
 		<meta charset="UTF-8">
 		<title>Share Menu Generator</title>
 		<meta content="Share Drop Down Menu Generator with your friends" name="description">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<style>
 	*{box-sizing:border-box;}
-	body {background-image:linear-gradient(to bottom right,#6d6d6d,#323232);height:100vh;margin:0;padding-top:calc(50vh - 100px);}
-	#napierdalator {width:220px;height:200px;margin:auto;padding:5px;text-align:center;}
+	body {background-image:linear-gradient(to bottom right,#6d6d6d,#323232);height:100vh;margin:0;padding-top:calc(50vh - 114px);user-select:none;}
+	#napierdalator {width:272px;height:220px;margin:auto;padding:5px;text-align:center;}
 			
 	.udostepnij {display:inline-flex;justify-content:center;align-items:center;width:36px;height:36px;border-style:outset;border-width:3px;cursor:pointer;vertical-align:top;border-radius:5px;margin:5px;}
 	.udostepnij:active {border-style:inset;padding:2px 0 0 2px;}
@@ -44,6 +45,19 @@
 	
 	.ewernot {background:#00a82d;border-color:#00bc32;}
 	.ewernot:hover {background:#00e33c;border-color:#00f741;}
+	
+	.kopLink {padding:5px;margin-top:7px;}
+	.kopLink input {font-size:13px;padding:1px 3px;width:100%;margin-bottom:5px;border:2px inset #323232;transition:background 0.5s, color 0.5s;}
+	.kopLink input:disabled {background:white;color:black;cursor:text;}
+	#kop {display:inline-block;position:relative;background:#cccccc;border:2px outset #d6d6d6;padding:0 6px 2px 6px;border-radius:5px;font-size:15px;cursor:pointer;opacity:1;transition:opacity 0.5s;z-index:2;}
+	#kop svg {height:13px;fill:currentColor;margin-right:4px;margin-bottom:-2px;}
+	#kop:hover {background:#afafaf;border-color:#b9b9b9;}
+	#kop:active {border-style:inset;padding:2px 4px 0 8px;}
+	.kopInf {display:inline-block;position:absolute;width:100px;text-align:center;left:calc(50% - 50px);padding-top:1px;opacity:0;transition:opacity 0.5s;z-index:1;color:white;}
+	.kopInf svg {height:16px;margin-right:4px;margin-bottom:-2px;fill:#b1ffb1;}
+	.kopLink.klikniety #kop {opacity:0;cursor:default;border-style:inset;padding:2px 4px 0 8px;}
+	.kopLink.klikniety .kopInf {opacity:1;}
+	.kopLink.klikniety input {background:#9d9dff;outline:3px double #ffff9d;color:white;}
 		</style>
 	</head>
   
@@ -76,11 +90,20 @@
 <span class="meil udostepnij" title="Send by email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg></span>
 
 <span class="ewernot udostepnij" title="Share on evernote"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M120.82 132.21c1.6 22.31-17.55 21.59-21.61 21.59-68.93 0-73.64-1-83.58 3.34-.56.22-.74 0-.37-.37L123.79 46.45c.38-.37.6-.22.38.37-4.35 9.99-3.35 15.09-3.35 85.39zm79 308c-14.68-37.08 13-76.93 52.52-76.62 17.49 0 22.6 23.21 7.95 31.42-6.19 3.3-24.95 1.74-25.14 19.2-.05 17.09 19.67 25 31.2 24.89A45.64 45.64 0 0 0 312 393.45v-.08c0-11.63-7.79-47.22-47.54-55.34-7.72-1.54-65-6.35-68.35-50.52-3.74 16.93-17.4 63.49-43.11 69.09-8.74 1.94-69.68 7.64-112.92-36.77 0 0-18.57-15.23-28.23-57.95-3.38-15.75-9.28-39.7-11.14-62 0-18 11.14-30.45 25.07-32.2 81 0 90 2.32 101-7.8 9.82-9.24 7.8-15.5 7.8-102.78 1-8.3 7.79-30.81 53.41-24.14 6 .86 31.91 4.18 37.48 30.64l64.26 11.15c20.43 3.71 70.94 7 80.6 57.94 22.66 121.09 8.91 238.46 7.8 238.46C362.15 485.53 267.06 480 267.06 480c-18.95-.23-54.25-9.4-67.27-39.83zm80.94-204.84c-1 1.92-2.2 6 .85 7 14.09 4.93 39.75 6.84 45.88 5.53 3.11-.25 3.05-4.43 2.48-6.65-3.53-21.85-40.83-26.5-49.24-5.92z"></path></svg></span>
+
+<div class="kopLink">
+	<input type="text" value="https://dropdownmenugenerator.github.io" disabled>
+	<div style="position:relative;">
+		<span class="kopInf"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Copied</span>
+		<span id="kop" title="Copy URL to clipboard"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"></path></svg>Copy</span>
+	</div>
+</div>
+
 		</div>
 		
 		<script>
-	const url = 'https://bloggerwidgets.github.io/random-posts';
-	const tytul = 'Random Posts Widget For Blogger';
+	const url = 'https://dropdownmenugenerator.github.io';
+	const tytul = 'Drop Down Menu Generator';
 	const pedaly = [{
 		'nzw' : 'pejsbuk',
 		'link' : 'https://www.facebook.com/sharer/sharer.php?u=' + url
@@ -130,6 +153,22 @@
 			window.open(p.link, '', 'left=50,top=50,width=560,height=400,menubar=no,toolbar=no,location=no');
 		}
 	});
+	
+	kop.onclick = function() {
+		let kopLink = document.querySelector('.kopLink');
+		if (!kopLink.classList.contains('klikniety')) {
+			kopLink.classList.add('klikniety');
+			let inp = kopLink.querySelector('input');
+			inp.disabled = false;
+			inp.select();
+			document.execCommand('copy');
+			inp.selectionStart = inp.selectionEnd;
+			inp.disabled = true;
+			setTimeout(function() {
+				kopLink.classList.remove('klikniety');
+			}, 2000);
+		}
+	}
 		</script>
 	</body>
 </html>
