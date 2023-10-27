@@ -26,6 +26,13 @@
 	<div class="site_description">Create custom vertical or horizontal drop down menu for free. Simple HTML/CSS/JS multi-level Menu for your website.</div>
 	</header>
 	
+	<noscript>
+	<div class="noscript">
+		<img class="warn" src="img/warning.png">We have detected that JavaScript is disabled in your browser, so this menu generator will not function properly. JavaScript support is required for the <strong>Drop Down Menu Generator</strong> to work properly. Please enable javascript in your browser settings and then refresh this page to enjoy the full functionality of the drop-down menu generator.
+		<div style="clear:both;"></div>
+	</div>
+	</noscript>
+	
 	<div id="generator">
 	  <div id="settings">
 	  
@@ -48,6 +55,7 @@
 		
 		<div class="seting">
 		  <span class="info informator"><inf class="duzyk">Choose whether the drop-down parts of the menu should expand when you click them with the mouse or just hover over them.</inf></span>
+		  <span class="uwaga info"><img src="img/warn2.png"><inf class="duzyk">Expanding a menu in which "<strong>display</strong>" is set to "<strong>vertical</strong>" and combined with "<strong>Drop-down method</strong>" set to "<strong>hover</strong>" may be inconvenient for the user. We do not recommend combining these settings in this way.</inf></span>
 		  <div class="sTitle">Drop-down method:</div>
 		  <div class="input">
 		    <select id="expand">
@@ -211,8 +219,16 @@
 		  </div>
 		</div>
 		
-		
 		<div class="seting">
+		  <span class="info informator"><inf class="wieksz">Should the edges of your menu be rounded?</inf></span>
+		  <div class="sTitle">Rounding the edges:</div>
+		  <div class="input" style="display:flex;align-items:center;">
+		    <span class="przelacznik" value="off" id="rounding"></span>
+			<span class="onof"></span>
+		  </div>
+		</div>
+		
+		<div class="seting dezaktywowalny">
 		  <span class="info informator"><inf class="duzyk">Responsive mode only matters when the "<strong>display</strong>" is set to "<strong>horizontal</strong>". The effect is that under normal conditions the menu is displayed horizontally, but when it does not fit (e.g. on smaller screens) it switches to vertical mode</inf></span>
 		  <div class="sTitle">Responsive mode:</div>
 		  <div class="input" style="display:flex;align-items:center;">
@@ -221,20 +237,11 @@
 		  </div>
 		</div>
 		
-		<div class="seting">
+		<div class="seting dezaktywowalny">
 		  <span class="info informator"><inf class="duzyk">This setting only matters when the "<strong>display</strong>" option is set to "<strong>horizontal</strong>". If enabled, your horizontal menu items will have equal width and will be evenly spaced to cover the entire width of the menu bar</inf></span>
 		  <div class="sTitle">Equal elements:</div>
 		  <div class="input" style="display:flex;align-items:center;">
 		    <span class="przelacznik" value="off" id="equalElements"></span>
-			<span class="onof"></span>
-		  </div>
-		</div>
-		
-		<div class="seting">
-		  <span class="info informator"><inf class="wieksz">Should the edges of your menu be rounded?</inf></span>
-		  <div class="sTitle">Rounding the edges:</div>
-		  <div class="input" style="display:flex;align-items:center;">
-		    <span class="przelacznik" value="off" id="rounding"></span>
 			<span class="onof"></span>
 		  </div>
 		</div>
